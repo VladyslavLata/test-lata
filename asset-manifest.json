@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/test-lata/static/css/main.7acaea2f.css",
+    "main.js": "/test-lata/static/js/main.bbd1fdc6.js",
+    "index.html": "/test-lata/index.html",
+    "main.7acaea2f.css.map": "/test-lata/static/css/main.7acaea2f.css.map",
+    "main.bbd1fdc6.js.map": "/test-lata/static/js/main.bbd1fdc6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7acaea2f.css",
+    "static/js/main.bbd1fdc6.js"
+  ]
+}
