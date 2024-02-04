@@ -1,0 +1,37 @@
+.linck {
+  display: flex;
+  gap:5px;
+  align-items: center;
+  height: 40px;
+  color:#ffffff;
+  transition: color linear 250ms;
+}
+
+.linck:hover {
+    color: #03008f;
+  }
+
+.linck:focus {
+  color: #03008f;
+}
+
+.text {
+  margin-left: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.28;
+  letter-spacing: 0.5px;
+}
+
+/* .wr{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 29px;
+  height: 29px;
+
+}
+.ic{
+
+}
+  */

@@ -1,0 +1,66 @@
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 54px;
+  height: 29px;
+  margin-left: auto;
+  border-radius: 14px;
+  transition: background-color linear 250ms;
+
+  @media screen and (min-width: 768px) {
+    margin-left: 15px;
+  }
+}
+
+.switchLightTheme {
+  background-color: #ffffff;
+}
+
+.switchDarcktTheme {
+  background-color: #183a5d;
+}
+
+.hiddenInput {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  transition: transform linear 250ms, background-color linear 250ms;
+}
+
+.toggleLightTheme {
+  background-color: #183a5d;
+}
+
+.toggleDarcktTheme {
+  background-color: #ffffff;
+  transform: translateX(25px);
+}
+
+.icon {
+  position: absolute;
+  transition: opacity linear 250ms;
+}
+
+.moonIcon {
+  fill: #183a5d;
+}
+
+.sunIcon {
+  fill: #ffffff;
+}
+
+.hiddenIcon {
+  opacity: 0;
+}

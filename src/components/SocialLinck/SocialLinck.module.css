@@ -1,0 +1,41 @@
+.lincksList {
+  display: flex;
+}
+
+.mainList {
+gap: 5px;
+
+@media screen and (min-width:768px){
+  margin-left: auto;
+}
+}
+
+.secondList {
+gap: 6px
+}
+
+.linck {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: color linear 250ms;
+}
+
+.linckMain {
+  width: 29px;
+  height: 29px;
+  color: #ffffff;
+}
+
+.linckSecond{
+  width: 37px;
+  height: 37px;
+  color: #0DD0BA;
+}
+
+.linck:hover {
+    color: #03008f;
+}
+.linck:focus {
+  color: #03008f;
+}
