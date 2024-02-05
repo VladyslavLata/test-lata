@@ -1,0 +1,11 @@
+.main {
+  transition: background-color linear 250ms;
+}
+
+.mainLight {
+background-color: #fcfcfc;
+}
+
+.mainDark {
+background-color: #0e1219;
+}

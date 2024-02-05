@@ -1,0 +1,22 @@
+.logo{
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 1.2;
+  transition: color linear 250ms;
+}
+
+.logoHeader {
+  font-size: 24px;
+}
+
+.logoFooter {
+font-size: 30px;
+}
+
+.lihht {
+    color: #000000;
+}
+
+.dark {
+  color: #ffffff;
+}

@@ -1,0 +1,29 @@
+.header {
+    transition: background-color linear 250ms;
+}
+
+.wrapp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+
+  @media screen and (min-width:1230px){
+    height: 110px;
+  padding: 30px 0 35px;
+  }
+}
+
+.light {
+background-color: #ffffff;
+}
+
+.dark{
+background-color: #0e1219;
+}
+
+.nav {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+}

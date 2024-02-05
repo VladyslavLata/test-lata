@@ -62,3 +62,7 @@ img,
 svg {
   display: block;
 }
+
+li > a.active {
+ background-color: #183a5d;
+}

@@ -3,24 +3,22 @@
   align-items: center;
   width: 100%;
   height: 50px;
-background: linear-gradient(90.00deg, #0dceb8, #2a87e5 100%);
+  background: linear-gradient(90deg, #0dceb8, #2a87e5 100%);
+  visibility: visible;
+  overflow: visible;
 }
 
-.wrapp{
+.wrapp {
   display: flex;
   align-items: center;
 }
 
 .linckList {
-  display: none;
-
-  @media screen and (min-width:768px) {
-    display: flex;
-    gap: 30px;
-  }
+  display: flex;
+  gap: 30px;
 }
 
-.item:nth-child(n+4) {
+.item:nth-child(n + 4) {
   @media screen and (max-width: 1229px) {
     display: none;
   }

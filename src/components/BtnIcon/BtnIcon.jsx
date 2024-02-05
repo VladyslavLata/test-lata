@@ -1,14 +1,13 @@
-import styles from "./BtnIcon.module.css";
+import styles from './BtnIcon.module.css';
 
-export const BtnIcon = ({ name, svg: Svg, w = 20, h = 20, onClick }) => {
+export const BtnIcon = ({ name, styleName = '', svg: Svg, w, h, onClick }) => {
   return (
     <button
       type="button"
-      className={`${styles.btn} ${
-        name === "menu" ? styles.btnMenu : styles.btnClose
-      }`}
-      name={name === "menu" ? "open mobile menu" : "close mobile menu"}
-      onClick={(e) => {
+      className={`${styles.btn} ${styles[styleName]}`}
+      // name={name === "menu" ? "open mobile menu" : "close mobile menu"}
+      name={name}
+      onClick={e => {
         onClick();
         e.currentTarget.blur();
       }}
