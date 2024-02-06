@@ -1,4 +1,7 @@
 .navPanel {
+  position: fixed;
+  top: 0;
+  left: 0;
   display: flex;
   align-items: center;
   width: 100%;
@@ -6,6 +9,7 @@
   background: linear-gradient(90deg, #0dceb8, #2a87e5 100%);
   visibility: visible;
   overflow: visible;
+  z-index: 99999;
 }
 
 .wrapp {

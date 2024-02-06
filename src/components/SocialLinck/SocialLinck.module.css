@@ -11,7 +11,13 @@ gap: 5px;
 }
 
 .secondList {
-gap: 6px
+justify-content: center;
+margin-top: 25px;
+gap: 6px;
+
+@media screen and (min-width:768px) {
+  margin-top: 30px;
+  }
 }
 
 .linck {
@@ -30,7 +36,15 @@ gap: 6px
 .linckSecond{
   width: 37px;
   height: 37px;
+  
+}
+
+.light {
   color: #0DD0BA;
+}
+
+.dark {
+  color: #ffffff;
 }
 
 .linck:hover {

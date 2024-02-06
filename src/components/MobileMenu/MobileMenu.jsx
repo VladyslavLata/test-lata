@@ -1,10 +1,13 @@
 import { useEffect } from 'react';
-import { useMediaQuery } from 'react-responsive';
+// import { useMediaQuery } from 'react-responsive';
 import { useAppStore } from 'Store/Store';
 import { BtnIcon } from '../BtnIcon/BtnIcon';
 import { Logo } from 'components/Logo/Logo';
 import { SearchInput } from 'components/SearchInput/SearchInput';
 import { Container } from 'components/Container/Container';
+import { NavList } from 'components/NavList/NavList';
+import { LinckItem } from 'components/LinkItem/LinckItem';
+import { icons } from 'consts/consts';
 import { ReactComponent as Close } from '../../img/close.svg';
 
 import styles from './MobileMenu.module.css';
@@ -38,16 +41,22 @@ export const MobileMenu = ({ showMobileMenu, setshowMobileMenu }) => {
     };
   }, [showMobileMenu]);
 
-  const handleMediaQueryChange = matches => {
-    if (matches) {
-      if (!showMobileMenu) {
-        return;
-      }
-      setshowMobileMenu(false);
-    }
+  const closeMenu = () => {
+    setshowMobileMenu(false);
   };
 
-  useMediaQuery({ minWidth: 1229 }, undefined, handleMediaQueryChange);
+  // const handleMediaQueryChange = matches => {
+  //   console.log(matches);
+  //   if (matches) {
+  //     if (!showMobileMenu) {
+  //       return;
+  //     }
+  //     // closeMenu();
+  //     setshowMobileMenu(false);
+  //   }
+  // };
+
+  // useMediaQuery({ minWidth: 1229 }, undefined, handleMediaQueryChange);
 
   return (
     <div
@@ -55,7 +64,7 @@ export const MobileMenu = ({ showMobileMenu, setshowMobileMenu }) => {
         showMobileMenu ? styles.openMobileMenu : ''
       } ${lightTheme ? styles.light : styles.dark}`}
     >
-      <Container>
+      <Container currentContainer="containerMenu">
         <div className={styles.logoWrapp}>
           <Logo main={true} />
           <BtnIcon
@@ -63,24 +72,25 @@ export const MobileMenu = ({ showMobileMenu, setshowMobileMenu }) => {
             svg={Close}
             w={'23px'}
             h={'23px'}
-            onClick={() => setshowMobileMenu(false)}
+            // onClick={() => setshowMobileMenu(false)}
+            onClick={closeMenu}
           />
         </div>
         <SearchInput />
-        <nav role="navigation">
-          {/* <ul>
-            {navData.map(({ title, path }) => (
-              <NavLink
-                key={title}
-                title={title}
-                path={path}
-                pathname={pathname}
-                showMobileMenu={showMobileMenu}
-                togleShowMobileMenu={setshowMobileMenu}
-              />
-            ))}
-          </ul> */}
-        </nav>
+        <div className={styles.wrappLinks}>
+          <nav className={styles.nav} role="navigation">
+            <NavList onClick={closeMenu} />
+          </nav>
+        </div>
+      </Container>
+      <Container>
+        <ul className={styles.linkList}>
+          {icons.map(({ icon, alt }, i) => (
+            <li key={alt}>
+              <LinckItem icon={icon} alt={alt} text={`Menu item ${i + 1}`} />
+            </li>
+          ))}
+        </ul>
       </Container>
     </div>
   );

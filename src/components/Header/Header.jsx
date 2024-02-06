@@ -1,4 +1,4 @@
-import MediaQuery from 'react-responsive';
+import MediaQuery, { useMediaQuery } from 'react-responsive';
 import { useState } from 'react';
 
 import { NavigationBar } from 'components/NavigationBar/NavigationBar';
@@ -12,10 +12,24 @@ import { MobileMenu } from 'components/MobileMenu/MobileMenu';
 import { ReactComponent as Menu } from '../../img/menu.svg';
 
 import styles from './Header.module.css';
+// import { useMediaQuery } from 'react-responsive';
 
 export const Header = () => {
   const [showMobileMenu, setshowMobileMenu] = useState(false);
   const lightTheme = useAppStore(state => state.lightTheme);
+
+  const handleMediaQueryChange = matches => {
+    // console.log(matches);
+    if (matches) {
+      if (!showMobileMenu) {
+        return;
+      }
+      setshowMobileMenu(false);
+    }
+  };
+
+  useMediaQuery({ minWidth: 1229 }, undefined, handleMediaQueryChange);
+
   return (
     <header
       className={`${styles.header} ${lightTheme ? styles.light : styles.dark}`}

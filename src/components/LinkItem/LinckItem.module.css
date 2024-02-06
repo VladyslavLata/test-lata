@@ -1,18 +1,25 @@
 .linck {
   display: flex;
-  gap:5px;
+  gap: 5px;
   align-items: center;
   height: 40px;
-  color:#ffffff;
+  color: #ffffff;
   transition: color linear 250ms;
 }
 
-.linck:hover {
-    color: #03008f;
+.linck:not(:last-child) {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 23px;
   }
+}
+
+.linck:hover {
+
+  color: #bddeff;
+}
 
 .linck:focus {
-  color: #03008f;
+  color: #bddeff;
 }
 
 .text {
@@ -23,6 +30,13 @@
   letter-spacing: 0.5px;
 }
 
+.linkMobMenuLight {
+  color: #707070;
+}
+
+/* .linkMobMenuDark {
+  color: #FFFFFF
+} */
 /* .wr{
   display: flex;
   align-items: center;
@@ -35,3 +49,24 @@
 
 }
   */
+
+  .banerLinck {
+    color: #ffffff;
+    height: 18px;
+  }
+
+  /* .banerLinck :hover {
+  color: #83bffa;
+  }
+
+.banerLinck:focus {
+  color: #2a87e5;
+} */
+
+  .textLinkBaner {
+      margin-left: 5px;
+    font-size: 14px;
+      font-weight: 400;
+      line-height: 18px;
+      letter-spacing: 0.5px;
+  }

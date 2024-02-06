@@ -1,0 +1,322 @@
+.banner {
+  position: relative;
+  width: 100%;
+  padding: 0 15px;
+  transition: background-color linear 250ms, box-shadow linear 250ms;
+
+  @media screen and (min-width: 768px) {
+    padding: 0 20px;
+  }
+  @media screen and (min-width: 1230px) {
+    width: 1230px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 40px;
+    padding: 0 0 10px;
+  }
+}
+
+.lightBanner {
+  background-color: #ffffff;
+  box-shadow: 0px 22px 59px 0px rgba(42, 134, 229, 0.07);
+
+  @media screen and (min-width: 768px) {
+    box-shadow: 0px 22px 59px 0px rgba(42, 134, 229, 0.07);
+  }
+}
+
+.darkBanner {
+  background-color: #0e1219;
+  box-shadow: 0px 22px 59px 0px rgba(0, 0, 0, 0.5);
+
+  @media screen and (min-width: 768px) {
+    box-shadow: 0px 22px 59px 0px rgba(42, 134, 229, 0.07);
+  }
+}
+
+.poster {
+  /* position: relative; */
+  width: 100%;
+  /* height: 130px; */
+  border-radius: 30px;
+  padding: 20px;
+  background-image: linear-gradient(
+      to left,
+      rgba(22, 28, 58, 0.8),
+      rgba(22, 28, 58, 0.8)
+    ),
+    url(../../img/mob_x1.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        to left,
+        rgba(22, 28, 58, 0.8),
+        rgba(22, 28, 58, 0.8)
+      ),
+      url(../../img/mob_x2.webp);
+  }
+
+  @media screen and (min-width: 380px) {
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 728px;
+    /* height: 180px; */
+    padding: 30px;
+    background-image: linear-gradient(
+        to left,
+        rgba(22, 28, 58, 0.8),
+        rgba(22, 28, 58, 0.8)
+      ),
+      url(../../img/tab_x1.webp);
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          to left,
+          rgba(22, 28, 58, 0.8),
+          rgba(22, 28, 58, 0.8)
+        ),
+        url(../../img/tab_x2.webp);
+    }
+  }
+
+  @media screen and (min-width: 1230px) {
+    width: 100%;
+    /* height: 190px; */
+    background-image: linear-gradient(
+        to left,
+        rgba(22, 28, 58, 0.8),
+        rgba(22, 28, 58, 0.8)
+      ),
+      url(../../img/desktop_x1.webp);
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          to left,
+          rgba(22, 28, 58, 0.8),
+          rgba(22, 28, 58, 0.8)
+        ),
+        url(../../img/desktop_x2.webp);
+    }
+  }
+}
+
+.posterContentWrapp {
+  display: flex;
+  align-items: center;
+}
+
+.imgWrapp {
+  /* position: relative; */
+  min-width: 90px;
+  min-height: 90px;
+  max-width: 90px;
+  max-height: 90px;
+  margin-right: 15px;
+  border-radius: 10px;
+  overflow: hidden;
+  /* object-fit: cover; */
+  box-shadow: 0px 3px 16px 0px rgba(42, 134, 229, 0.08);
+  background-color: #0dceb8;
+
+  @media screen and (min-width: 768px) {
+    min-width: 120px;
+    min-height: 120px;
+    max-width: 120px;
+    max-height: 120px;
+    margin-right: 25px;
+  }
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+
+  @media screen and (min-width: 768px) {
+    font-size: 35px;
+  }
+  @media screen and (min-width: 768px) {
+    font-size: 30px;
+    line-height: 1.6;
+  }
+}
+
+.btnLinkList {
+  display: flex;
+  gap: 8px;
+}
+
+.linkItem {
+  height: 28px;
+  padding: 5px 15px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 17px;
+  background-color: transparent;
+}
+
+.linkItem:last-child {
+  background: linear-gradient(90deg, #0dceb8, #2a87e5 100%);
+}
+
+.bannerfooter {
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+
+  @media screen and (min-width: 380px) {
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 728px;
+  }
+
+  @media screen and (min-width: 1230px) {
+    width: 100%;
+  }
+}
+
+.dropdown {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  padding: 20px;
+  border-radius: 20px;
+    /* font-display: none;
+      visibility: hidden;
+      overflow: hidden; */
+transition: background-color linear 250ms;
+
+  @media screen and (min-width: 380px) {
+    width: 350px;
+    left: auto;
+    right: auto;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 728px;
+  }
+
+  @media screen and (min-width: 1230px) {
+    width: 100%;
+  }
+}
+
+/* .dropdownVisible {
+  font-display: block;
+  visibility: visible;
+  overflow: visible;
+} */
+
+.dropdownLight {
+  background-color: #ffffff;
+}
+
+.dropdownDark {
+  background-color: #0e1219;
+}
+
+.dropdownItem {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: 0.5px;
+
+
+
+  @media screen and (max-width: 1229px) {
+    text-align: center;
+      background: linear-gradient(90deg, rgb(13, 208, 186), rgb(42, 134, 229));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+
+     @media screen and (min-width: 1230px) {
+      font-weight: 400;
+      color: #707070;
+     }
+}
+
+.bannerfooterList {
+  display: none;
+
+  @media screen and (min-width:1230px){
+      display: flex;
+  gap:20px;
+  }
+
+}
+
+
+.dropdownItem:first-child {
+  @media screen and (max-width:1229px) {
+position: relative;
+
+}
+}
+
+.dropdownItem:first-child::after {
+   content: "";
+  position: absolute;
+  right: 50%;
+  bottom: -5px;
+  transform: translateX(50%);
+  display: inline-block;
+  border-radius: 5px;
+  width: 24px;
+  height: 5px;
+  background: linear-gradient(90deg, rgb(13, 208, 186), rgb(42, 134, 229));
+ 
+}
+
+@media screen and (min-width: 1230px) {
+  .dropdownItem:first-child::after {
+  display: none;
+  }
+}
+
+@media screen and (min-width: 1230px) {
+  .dropdownItem:not(:first-child)::before {
+  content: "";
+  position: relative;
+  top: 3px;
+  display: inline-block;
+  width: 1px;
+  height: 21px;
+  margin-right: 18px;
+  background-color: #707070;
+  }
+}
+
+.dropdownItem:not(:last-child) {
+  @media screen and (max-width: 1229px) {
+    margin-bottom: 15px;
+  }
+}
+

@@ -3,6 +3,7 @@ import { Suspense } from 'react';
 import { useAppStore } from 'Store/Store';
 
 import { Header } from 'components/Header/Header';
+import { Footer } from 'components/Footer/Footer';
 
 import styles from './SharedLayout.module.css';
 
@@ -20,6 +21,7 @@ export const SharedLayout = () => {
           <Outlet />
         </Suspense>
       </main>
+      <Footer />
     </>
   );
 };

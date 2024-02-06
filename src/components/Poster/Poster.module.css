@@ -1,0 +1,38 @@
+.posterWrapp{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 600px;
+  font-size: 60px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.5px;
+  text-align: center;
+  border-radius: 20px;
+  color: #ffffff;
+  background: linear-gradient(110.22deg, rgba(252, 183, 56, 0.89) 6.721%, rgba(239, 121, 60, 0.89) 113.183%), url(../../img/bg-img.jpg);
+  background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+  @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+        background-image: linear-gradient(110.22deg, rgba(252, 183, 56, 0.89) 6.721%, rgba(239, 121, 60, 0.89) 113.183%),
+          url(../../img/bg-img-x2.jpg);
+      }
+
+  @media screen and (max-width:1229px)
+  {
+    display: none;
+  }
+}
+
+.text {
+  margin-top: 10px;
+  font-size: 40px;
+  line-height: 1.7;
+}

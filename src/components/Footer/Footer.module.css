@@ -1,0 +1,38 @@
+.footer {
+  padding: 28px 15px;
+    transition: background-color linear 250ms;
+
+    @media screen  and (min-width:768px){
+        padding: 28px 20px;
+    }
+
+             @media screen and (min-width:1230px) {
+               padding: 28px 30px;
+             }
+}
+
+.bgLight {
+  background-color: #fcfcfc;
+}
+
+.bgDark {
+background-color: #0e1219;
+}
+
+.footerContentWrapp {
+ /* width: calc(100% - 30px); */
+ width: 100%;
+ padding: 20px;
+ margin-left: auto;
+ margin-right: auto;
+ border-radius: 40px;
+  background: linear-gradient(90deg, #0dceb8, #2a87e5 100%);
+
+    @media screen and (min-width:768px) {
+        padding: 30px 30px 40px;
+      }
+
+                    @media screen and (min-width:1230px) {
+                      padding: 20px 30px
+                    }
+                    }

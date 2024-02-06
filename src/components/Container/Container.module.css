@@ -18,6 +18,9 @@
   }
 }
 
+.containerMenu {
+  flex-grow: 1;
+}
 /* .headerContainer {
   @media screen and (max-width: 767px) {
     display: flex;

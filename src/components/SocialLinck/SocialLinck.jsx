@@ -1,6 +1,9 @@
+import { useAppStore } from 'Store/Store';
+
 import styles from './SocialLinck.module.css';
 
 export const SocialLinck = ({ lincks, main }) => {
+  const lightTheme = useAppStore(state => state.lightTheme);
   return (
     <ul
       className={`${styles.lincksList} ${
@@ -12,7 +15,7 @@ export const SocialLinck = ({ lincks, main }) => {
           <a
             className={`${styles.linck} ${
               main ? styles.linckMain : styles.linckSecond
-            }`}
+            } ${lightTheme && !main ? styles.light : styles.dark}`}
             href={path}
             target="_blanck"
             rel="noopener noreferrer"

@@ -1,0 +1,23 @@
+.btn{
+    display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: transparent;
+      font-size: 20px;
+      line-height: 1.2;
+      font-weight: 500;
+      /* color: transparent; */
+      cursor: pointer;
+      transition: color linear 250ms;
+}
+
+.btnLight {
+  color: #707070;
+}
+
+.btnDark {
+  color: #ffffff;
+}
