@@ -1,0 +1,59 @@
+.votePanel {
+  display: none;
+
+  @media screen and (min-width:1230px) {
+  display: flex;
+  width: 270px;
+  height: 35px;
+  border-radius: 17px;
+  overflow: hidden;
+  background: linear-gradient(270.00deg, rgb(252, 197, 57), rgb(220, 74, 25) 100%);
+  }
+}
+
+.voteNumber {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ min-width: 21px;
+  height: 100%;
+font-size: 12px;
+line-height: 1.2;
+font-weight: 700;
+color:#ffffff;
+cursor: pointer;
+transition: background-color linear 250ms, color linear 250ms;
+}
+
+.voteNumberLight {
+background-color: #EBF6F5;
+color: #707070;
+}
+
+.voteNumberDark {
+  background-color: #183A5D;
+}
+
+.voteNumberTransparent {
+  background-color: transparent;
+}
+
+.voteNumberLight.voteNumberTransparent {
+  color: #ffffff;
+}
+
+
+
+.voteNumber:not(:last-child) {
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.voteNumber:last-child {
+flex-grow: 1;
+}
+
+.itemNote {
+  min-width: 50px;
+  background-color: transparent;
+}
+

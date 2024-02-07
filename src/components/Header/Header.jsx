@@ -12,14 +12,12 @@ import { MobileMenu } from 'components/MobileMenu/MobileMenu';
 import { ReactComponent as Menu } from '../../img/menu.svg';
 
 import styles from './Header.module.css';
-// import { useMediaQuery } from 'react-responsive';
 
 export const Header = () => {
   const [showMobileMenu, setshowMobileMenu] = useState(false);
   const lightTheme = useAppStore(state => state.lightTheme);
 
   const handleMediaQueryChange = matches => {
-    // console.log(matches);
     if (matches) {
       if (!showMobileMenu) {
         return;
@@ -54,7 +52,6 @@ export const Header = () => {
               h={'22px'}
               onClick={() => setshowMobileMenu(true)}
             />
-            {/* name, styleName="", svg: Svg, w, h, onClick */}
           </MediaQuery>
         </div>
       </Container>

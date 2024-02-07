@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-// import { useMediaQuery } from 'react-responsive';
 import { useAppStore } from 'Store/Store';
 import { BtnIcon } from '../BtnIcon/BtnIcon';
 import { Logo } from 'components/Logo/Logo';

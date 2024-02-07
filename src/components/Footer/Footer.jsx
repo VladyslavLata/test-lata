@@ -1,7 +1,7 @@
 import { useAppStore } from 'Store/Store';
 
 import { FooterCard } from 'components/FooterCard/FooterCard';
-import { Container } from 'components/Container/Container';
+import { ListFooter } from 'components/ListFooter/ListFooter';
 
 import styles from './Footer.module.css';
 
@@ -15,6 +15,11 @@ export const Footer = () => {
     >
       <div className={styles.footerContentWrapp}>
         <FooterCard />
+        <div className={styles.listsWrap}>
+          <ListFooter title={'Catehgory'} />
+          <ListFooter title={'Play better'} />
+          <ListFooter title={'Useful links'} />
+        </div>
       </div>
     </footer>
   );

@@ -4,15 +4,33 @@ import MediaQuery from 'react-responsive';
 import { useAppStore } from 'Store/Store';
 import { Btn } from 'components/Btn/Btn';
 import { LinckItem } from 'components/LinkItem/LinckItem';
+import { VotePanel } from 'components/VotePanel/VotePanel';
+import { VoteDisplay } from 'components/VoteDisplay/VoteDisplay';
 
 import { ReactComponent as Menu } from '../../img/menu-dropdown.svg';
-import { iconsBaner, dropdownLinks } from 'consts/consts';
+import { iconsBaner, dropdownLinks, ratingData } from 'consts/consts';
 import avatar from '../../img/avatar.webp';
 import styles from './Banner.module.css';
 
 export const Banner = () => {
   const [dropdownVisible, setDropdownVisible] = useState(false);
   const lightTheme = useAppStore(state => state.lightTheme);
+  const [rating, setRating] = useState({ ...ratingData });
+
+  const yourVote = vote => {
+    if (!rating.yourVote) {
+      setRating({
+        votes: rating.votes + 1,
+        yourVote: vote,
+        score: rating.score + vote,
+      });
+    } else
+      setRating({
+        ...rating,
+        score: rating.score - rating.yourVote + vote,
+        yourVote: vote,
+      });
+  };
 
   const toggleDropdavnVisible = () => {
     setDropdownVisible(!dropdownVisible);
@@ -52,6 +70,7 @@ export const Banner = () => {
               </ul>
             </MediaQuery>
           </div>
+          <VoteDisplay rating={rating} />
         </div>
       </div>
       <div className={styles.bannerfooter}>
@@ -65,6 +84,7 @@ export const Banner = () => {
             </li>
           ))}
         </ul>
+        <VotePanel onYourVote={yourVote} currentVote={rating.yourVote} />
         <MediaQuery maxWidth={1229}>
           <Btn
             name={'show or hidden dropdown'}

@@ -26,25 +26,29 @@ export const CardsList = () => {
               lightTheme ? styles.cardLight : styles.cardDark
             }`}
           >
-            <div className={styles.imgWrapp}>
-              <img
-                className={styles.image}
-                src={image}
-                alt="game world"
-                srcSet={`${image} 1x, ${bigImage} 2x`}
-              />
-            </div>
-            <h4 className={styles.title}>{title}</h4>
-            <div
-              className={`${styles.footerCard} ${
-                lightTheme ? styles.footerCardLight : styles.footerCardDark
-              }`}
-            >
-              <Man alt="man icon" fill="currentColor" />
-              <p className={`${styles.text} ${styles.textPosition}`}>{name}</p>
-              <Clock alt="clock icon" fill="currentColor" />
-              <p className={styles.text}>{date}</p>
-            </div>
+            <a className={styles.link} href="#">
+              <div className={styles.imgWrapp}>
+                <img
+                  className={styles.image}
+                  src={image}
+                  alt="game world"
+                  srcSet={`${image} 1x, ${bigImage} 2x`}
+                />
+              </div>
+              <h4 className={styles.title}>{title}</h4>
+              <div
+                className={`${styles.footerCard} ${
+                  lightTheme ? styles.footerCardLight : styles.footerCardDark
+                }`}
+              >
+                <Man alt="man icon" fill="currentColor" />
+                <p className={`${styles.text} ${styles.textPosition}`}>
+                  {name}
+                </p>
+                <Clock alt="clock icon" fill="currentColor" />
+                <p className={styles.text}>{date}</p>
+              </div>
+            </a>
           </li>
         ))}
       </ul>

@@ -4,17 +4,6 @@ import { links } from 'consts/consts';
 
 import styles from './NavList.module.css';
 
-// const links = [
-//   { link: 'Home', path: '/' },
-//   { link: 'item B', path: 'item_b' },
-//   { link: 'item C', path: 'item_c' },
-//   { link: 'item D', path: 'item_d' },
-//   { link: 'item E', path: 'item_e' },
-//   { link: 'item F', path: 'item_f' },
-//   { link: 'item G', path: 'item_g' },
-//   { link: 'item H', path: 'item_h' },
-// ];
-
 export const NavList = ({ onClick }) => {
   const lightTheme = useAppStore(state => state.lightTheme);
   return (

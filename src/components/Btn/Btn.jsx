@@ -10,7 +10,6 @@ export const Btn = ({ name, svg: Svg, onClick, text }) => {
       className={`${styles.btn} ${
         lightTheme ? styles.btnLight : styles.btnDark
       }`}
-      // name={name === "menu" ? "open mobile menu" : "close mobile menu"}
       name={name}
       onClick={e => {
         onClick();

@@ -43,12 +43,9 @@ margin-top: 50px;
 @media screen and (min-width:768px){
   margin-top: 75px;
 }
-/* overflow-y: scroll; */
+
 }
-/* 
-.nav{
-  flex-grow: 1;
-} */
+
 
 .linkList {
 display: flex;

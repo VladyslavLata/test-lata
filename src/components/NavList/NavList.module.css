@@ -8,7 +8,7 @@
 .item {
   padding: 10px 0px;
   border-radius: 10px;
-  /* overflow: hidden; */
+
   @media screen and (max-width: 1229px) {
     width: 100%;
     text-align: center;

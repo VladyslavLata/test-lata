@@ -9,7 +9,6 @@
       font-size: 20px;
       line-height: 1.2;
       font-weight: 500;
-      /* color: transparent; */
       cursor: pointer;
       transition: color linear 250ms;
 }

@@ -10,6 +10,8 @@ import { ReactComponent as G } from '../img/g.svg';
 import { ReactComponent as Signal } from '../img/signal.svg';
 import { ReactComponent as Download } from '../img/download.svg';
 
+export const ratingData = { votes: 12, score: 77, yourVote: 0 };
+
 export const icons = [
   { icon: Phone, alt: 'phone icon' },
   { icon: Icon, alt: 'icon' },
@@ -59,6 +61,8 @@ export const dropdownLinks = [
   { link: 'Item', path: '#' },
   { link: 'Item', path: '#' },
 ];
+
+export const buttons = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 export const socialLincks = [
   {

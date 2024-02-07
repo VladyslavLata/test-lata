@@ -5,7 +5,6 @@ export const BtnIcon = ({ name, styleName = '', svg: Svg, w, h, onClick }) => {
     <button
       type="button"
       className={`${styles.btn} ${styles[styleName]}`}
-      // name={name === "menu" ? "open mobile menu" : "close mobile menu"}
       name={name}
       onClick={e => {
         onClick();
